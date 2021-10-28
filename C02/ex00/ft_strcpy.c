@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agarnier <agarnier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/21 15:43:35 by agarnier          #+#    #+#             */
-/*   Updated: 2021/10/21 15:43:39 by agarnier         ###   ########.fr       */
+/*   Created: 2021/10/26 12:12:48 by agarnier          #+#    #+#             */
+/*   Updated: 2021/10/26 12:12:56 by agarnier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_swap(int *a, int *b)
+char	*ft_strcpy(char *dest, char *src)
 {
-	int c
-	int d
+	int	i;
 
-	c = *a
-	d = *b
-	*a = d
-	*b = c
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }

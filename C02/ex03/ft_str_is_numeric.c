@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agarnier <agarnier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/21 15:43:35 by agarnier          #+#    #+#             */
-/*   Updated: 2021/10/21 15:43:39 by agarnier         ###   ########.fr       */
+/*   Created: 2021/10/26 12:13:37 by agarnier          #+#    #+#             */
+/*   Updated: 2021/10/26 12:13:41 by agarnier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_swap(int *a, int *b)
+int	ft_str_is_numeric(char *str)
 {
-	int c
-	int d
+	int	i;
 
-	c = *a
-	d = *b
-	*a = d
-	*b = c
+	i = 0;
+	if (str[0] == '\0')
+	{
+		return (1);
+	}
+	while (str[i] != '\0')
+	{
+		if ((str[i] >= '0' && str[i] <= '9'))
+		{
+			i++;
+		}
+		else
+		{
+			return (0);
+		}
+	}
+	return (1);
 }

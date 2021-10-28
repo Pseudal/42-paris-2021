@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   tab.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agarnier <agarnier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lcalvie <lcalvie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/21 15:43:35 by agarnier          #+#    #+#             */
-/*   Updated: 2021/10/21 15:43:39 by agarnier         ###   ########.fr       */
+/*   Created: 2021/10/23 15:16:07 by lcalvie           #+#    #+#             */
+/*   Updated: 2021/10/23 15:33:12 by lcalvie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_swap(int *a, int *b)
+void	init_tab_in(int *tab_in, int size)
 {
-	int c
-	int d
+	int	i;
 
-	c = *a
-	d = *b
-	*a = d
-	*b = c
+	i = 0;
+	while (i < size)
+	{
+		tab_in[i] = 0;
+		i++;
+	}
 }

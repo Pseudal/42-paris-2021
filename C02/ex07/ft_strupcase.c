@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agarnier <agarnier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/21 15:43:35 by agarnier          #+#    #+#             */
-/*   Updated: 2021/10/21 15:43:39 by agarnier         ###   ########.fr       */
+/*   Created: 2021/10/26 12:14:54 by agarnier          #+#    #+#             */
+/*   Updated: 2021/10/26 12:14:56 by agarnier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_swap(int *a, int *b)
+char	*ft_strupcase(char *str)
 {
-	int c
-	int d
+	int	i;
 
-	c = *a
-	d = *b
-	*a = d
-	*b = c
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if ((str[i] >= 'a' && str[i] <= 'z'))
+		{
+			str[i] = str[i] - 32;
+			i++;
+		}
+		else
+		{
+			i++;
+		}
+	}
+	return (str);
 }
