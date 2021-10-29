@@ -9,12 +9,11 @@ int        ft_atoi(const char *str)
     result = 0;
     while (str[i] == ' ' || str[i] > 8 && str[i] < 14)
         i++;
-    while (str[i] == '-' || str[i] == '+')
-    {
-        if (str[i] == '-')
+    if (str[i] == '-')
             neg *= -1;
-        i++;
-    }
+            i++;
+    if (str[i] == '-' || str[i] == '+')
+            i++;
     while (str[i] >= 48 && str[i] <= 57)
     {
         result = result * 10 + (str[i] - 48);
