@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: agarnier <agarnier@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/01 13:19:27 by agarnier          #+#    #+#             */
+/*   Updated: 2021/11/01 13:19:33 by agarnier         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
@@ -8,7 +20,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 		if (s1[i] == s2[i])
 			i++;
 		else
-			return (s1[i] - s2[i]]);
+			return (s1[i] - s2[i]);
 	}
 	return (0);
 }
