@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agarnier <agarnier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 10:52:17 by agarnier          #+#    #+#             */
-/*   Updated: 2021/11/02 10:52:22 by agarnier         ###   ########.fr       */
+/*   Created: 2021/11/02 17:44:47 by agarnier          #+#    #+#             */
+/*   Updated: 2021/11/02 17:44:50 by agarnier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-int	ft_char(char c)
+void	ft_char(char c)
 {
-	write (1, &c, 1);
-	return (0);
+	write(1, &c, 1);
 }
 
 void	ft_putstr(char *str)
@@ -23,9 +22,23 @@ void	ft_putstr(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (str[i] != '\0')
 	{
 		ft_char(str[i]);
 		i++;
 	}
+}
+
+int	main(int argc, char **argv)
+{
+	int	j;
+
+	j = argc - 1;
+	while (j >= 1)
+	{
+		ft_putstr(argv[j]);
+		ft_char('\n');
+		j--;
+	}
+	return (0);
 }
